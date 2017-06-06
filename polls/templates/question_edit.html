@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+</head>
+<body>
+
+    <div class="feature">
+      <div class="container">
+            <h2>NEW QUESTION</h2>
+          <h1>
+
+              <a href="{% url 'polls:index' %}">Menu</a>
+          </h1>
+      </div>
+    </div>
+    <div class="container">
+        <div class="normal">
+            {% block content %}
+            <form method="POST" class="post-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Salve</button>
+            </form>
+        {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

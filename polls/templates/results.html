@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div class="feature">
+      <div class="container">
+            <h2>RESULTS</h2>
+          <h1>
+              <a href="{% url 'polls:index' %}">Menu</a>
+          </h1>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class ="normal">
+            <h1>{{ question.question_text }}</h1>
+
+            <ul>
+                {% for choice in question.choice_set.all %}
+                    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize}}</li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <p>&copy; Laurival & Daniel</p>
+      </div>
+    </div>
+
+    <div class="outer">
+        <a href="https://www.linkedin.com/in/edgar-yano-6583b74/" target="_blank">
+        <img src="/static/images/yano.jpg" height="100" width="100" /></a>
+    </div>
+</body>
+</html>

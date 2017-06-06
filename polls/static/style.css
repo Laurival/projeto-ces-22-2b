@@ -1,0 +1,151 @@
+@import "compass ";
+ul a{
+    color: black;
+    font-family:"Freestyle Script";
+    font-weight: 900;
+    font-size: 28pt;
+}
+h1 {
+    font-family: 'Freestyle Script', cursive;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 50px;
+}
+/* Form */
+input[type=radio] {
+    width: 10px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+input[type=radio]:focus {
+    width: 300px;
+}
+input[type=text] {
+    background-color: black;
+    border: hidden;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Freestyle Script";
+    font-size: 28pt;
+    width: 200px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+input[type=text]:focus {
+    width: 600px;
+}
+/* Button */
+button{
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Freestyle Script', cursive;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.survey button {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Freestyle Script', cursive;
+    float:right;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+button:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.normal {
+    color: black;
+    font-family:"Freestyle Script";
+    font-weight: 900;
+    font-size: 28pt;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+.container h1{
+    max-width: 940px;
+    margin: 20px auto;
+
+
+}
+.footer .container {
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* Main */
+.main {
+  text-align: top;
+  background: url("images/fundo_main.jpg") no-repeat center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.main .container {
+  position: relative;
+    top: 0px;
+    left: 10px;
+}
+.main .container p{
+  position: relative;
+  left: 70px;
+}
+.main h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 55px;
+}
+
+.main p {
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.feature {
+  background: url("images/fundo_main.jpg") no-repeat center center;
+  background-size: cover;
+  height: 120px;
+  text-align: right;
+}
+
+.feature .container{
+    position: relative;
+    top: 10px;
+}
+.feature h2 {
+    color: #fff;
+    font-size: 80px;
+    font-family: "Helvetica";
+    margin:0;
+    padding: 5px 0 0;
+}
+
+body {
+    background: white url("images/bg5.gif") no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+img {
+    border-radius: 100%;
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+}

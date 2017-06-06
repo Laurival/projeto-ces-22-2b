@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <div class="feature">
+      <div class="container">
+        <h2>DECIDE</h2>
+          <h1>
+              <a href="{% url 'polls:index' %}">Menu</a>
+          </h1>
+      </div>
+    </div>
+
+    <div class="container">
+        <meta charset="UTF-8">
+        <title>CES-22: Choices</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+        <h1>{{ question.question_text }} </h1>
+        <div class= "survey">
+            <p>
+                <a href="edit"><button>New</button></a>
+            </p>
+        </div>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <div class="normal">
+        <form action ="{% url 'polls:vote' question.id %}" method = "post">
+            {% csrf_token %}
+            {% for choice in question.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter}}" value="{{choice.id}}"/>
+
+                <label for="choice{{ forloop.counter}}">{{ choice.choice_text }}</label><br/>
+            {% endfor %}
+            <p><button type="submit" >Submit</button></p>
+        </form>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <p>&copy; Laurival & Daniel</p>
+      </div>
+    </div>
+
+
+
+    <div class="outer">
+        <a href="https://www.linkedin.com/in/edgar-yano-6583b74/" target="_blank">
+        <img src="/static/images/yano.jpg" height="100" width="100" /></a>
+    </div>
+</head>
+
+
+<body>
+
+</body>
+</html>

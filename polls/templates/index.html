@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CES-22</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+
+<body>
+
+    <div class="main">
+      <div class="container">
+        <h1>Quizzes</h1>
+        <p>Give us your opnion</p>
+      </div>
+    </div>
+
+    <div class='container'>
+        <h1 class="survey">
+            Survey's:<a href="new"><button>New</button></a>
+        </h1>
+
+    </div>
+
+    <div>
+        {% if latest_question_list %}
+        <ul class='container'>
+        {% for question in latest_question_list %}
+           <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }} -- {{ question.pub_date }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>No polls are available.</p>
+        {% endif %}
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2>CES-22</h2>
+        <p>Project of web concept </p>
+      </div>
+    </div>
+
+
+
+    <div class="footer">
+      <div class="container">
+        <p>&copy; Laurival & Daniel</p>
+      </div>
+    </div>
+
+    <div class="outer">
+        <a href="https://www.linkedin.com/in/edgar-yano-6583b74/" target="_blank">
+        <img src="/static/images/yano.jpg" height="100" width="100" /></a>
+    </div>
+
+
+</body>
+
+</html>
